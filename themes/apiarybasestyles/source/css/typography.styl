@@ -1,0 +1,48 @@
+.typoBox
+  &__content
+    line-height 1.8
+    font-size 12px
+    letter-spacing 5px
+    word-wrap break-word
+    max-width 253px
+    position relative
+    &:before
+      content ''
+      display block
+      font-size 12px
+      top 0
+      left 0
+      letter-spacing 0
+    &--sans
+      font-family $baseFont
+    &--mono
+      font-family $monoFont
+      max-width 270px
+    &--100
+      font-weight 100
+      &:before
+        content 'font-weight 100'
+    &--400
+      font-weight 400
+      &:before
+        content 'font-weight 400'
+    &--600
+      font-weight 600
+      &:before
+        content 'font-weight 600'
+
+.typoPreview
+  code
+    -webkit-user-select none
+    user-select none
+    display inline-block
+    width 80px
+    font-size 14px
+    margin-bottom 15px
+
+@media (max-width 700px)
+  .typoPreview
+    code
+      display block
+      margin-bottom -5px
+      margin-top 15px

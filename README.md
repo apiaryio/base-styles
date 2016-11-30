@@ -1,2 +1,1 @@
-# base-styles
-Apiary Base CSS Styles
+# Apiary Base Styles

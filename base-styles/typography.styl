@@ -1,0 +1,41 @@
+$baseFont = 'Source Sans Pro', sans-serif
+$monoFont = 'Source Code Pro', monospace
+$baseFontSize = 16px
+
+$apiaryTypoBase()
+  color $primaryBaseColor
+  font-family $baseFont
+  font-size $baseFontSize
+  font-weight 200
+  line-height 1.5
+
+  // These element don't inherit font-family by default
+  input, select, textarea, button
+    font-family inherit
+
+  code, pre
+    font-family $monoFont
+
+$apiaryHeadings()
+  h1, h2, h3, h4, h5, h6
+    margin 0
+    font-weight 100
+    line-height 1.4
+    & + p, & + ul, & + ol
+      margin-top 0
+  h2 + h3, h3 + h4, h4 + h5, h5 + h6
+    margin-top: 0
+  h1
+    font-size 46px
+  h2
+    font-size 38px
+  h3
+    font-size 30px
+  h4
+    font-size 24px
+  h5
+    font-size 18px
+    font-weight 400
+  h6
+    font-size 16px
+    font-weight 400

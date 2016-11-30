@@ -1,0 +1,36 @@
+.palette
+  &__color
+    width 100%
+    height 50px
+    border-right 100px solid grey
+  &__colorGroup
+    &:last-child
+      text-align right
+  &__name
+    padding-top 7px
+    font-size 10px
+    font-family $monoFont
+  &__hex
+    font-weight 700
+
+  &--primary
+    color $primaryColor
+    .palette__color
+      background-color $primaryColor
+      border-right-color $primaryColorHover
+    .palette__colorGroup:last-child
+      color $primaryColorHover
+  &--secondary
+    color $secondaryColor
+    .palette__color
+      background-color $secondaryColor
+      border-right-color $secondaryColorHover
+    .palette__colorGroup:last-child
+      color $secondaryColorHover
+  &--tertiary
+    color $tertiaryColor
+    .palette__color
+      background-color $tertiaryColor
+      border-right-color $tertiaryColorHover
+    .palette__colorGroup:last-child
+      color $tertiaryColorHover

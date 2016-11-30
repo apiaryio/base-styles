@@ -1,0 +1,8 @@
+<h1>Apiary Base Style</h1>
+
+<% site.posts.sort('date').each(function(post) { %>
+  <article>
+    <h2><%- post.title %></h2>
+    <%- post.content %>
+ </article>
+<% }) %>

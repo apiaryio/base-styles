@@ -1,0 +1,28 @@
+$apiaryReset()
+  *, *:before, *:after
+    box-sizing border-box
+    -webkit-text-size-adjust 100% // Prevent incosistent text sizes on Safari
+  html, body
+    padding 0
+    margin 0
+  a
+    color $linkColor
+    &:hover
+      color $linkColorHover
+  img
+    width auto
+    height auto
+    max-width 100%
+
+$apiaryBase()
+  $apiaryReset()
+  body
+    $apiaryTypoBase()
+
+$mediaObject()
+  display flex
+  align-items flex-start
+  &--figure
+    margin-right 10px
+  &--body
+    flex 1
