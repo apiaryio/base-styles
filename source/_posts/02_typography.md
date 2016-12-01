@@ -33,7 +33,7 @@ For production, [better ways are recommended](https://www.zachleat.com/web/compr
     font-family $baseFont
   ```
   <div class="row between-xs">
-    <div class="typoBox__content typoBox__content--sans typoBox__content--100 col-xs-12 col-md-4">abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890</div>
+    <div class="typoBox__content typoBox__content--sans typoBox__content--200 col-xs-12 col-md-4">abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890</div>
     <div class="typoBox__content typoBox__content--sans typoBox__content--400 col-xs-12 col-md-4">abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890</div>
     <div class="typoBox__content typoBox__content--sans typoBox__content--600 col-xs-12 col-md-4">abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890</div>
   </div>
