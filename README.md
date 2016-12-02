@@ -10,7 +10,7 @@ npm i apiary-base-styles -S
 and in your Stylus
 
 ```stylus
-@import 'apiary-base-styles'
+@import '~apiary-base-styles'
 ```
 
 This will include main `.styl` file and you can start using mixins and variables. See [Apiary Base Styles](https://styles.apiary-services.com) for live examples.

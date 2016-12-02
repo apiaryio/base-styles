@@ -24,7 +24,7 @@ npm i apiary-base-styles -S
 Import into your Stylus file:
 
 ```stylus
-@import 'apiary-base-styles'
+@import '~apiary-base-styles'
 ```
 
 Now you can start using parts of Base Styles - all of them are prefixed with `$`, see reference below.
