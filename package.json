@@ -42,6 +42,9 @@
   "hexo": {
     "version": "3.2.2"
   },
+  "release": {
+    "verifyConditions": "condition-circle"
+  },
   "config": {
     "commitizen": {
       "path": "node_modules/cz-conventional-changelog"
