@@ -1,6 +1,7 @@
 $_defaultButtonSize = 13px;
 
 $apiaryButton(fontSize = $_defaultButtonSize)
+  font-family $baseFont // Since Chrome may overwrite defaults
   display inline-flex // Let's keep button as inline element, with flex positioning
   margin 0 // normalize it for Safari
   color white
