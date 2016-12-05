@@ -1,0 +1,34 @@
+$alert()
+  $mediaObject()
+  flex-wrap wrap // Longer items are wrapped - like headings/body
+  border-width 1px
+  border-style solid
+  border-radius 4px
+  padding 8px
+  text-align center
+  margin-bottom 5px
+  p
+    margin 0
+    text-align left
+
+  &--body
+    text-align left
+
+  &--heading
+    text-align left
+    font-weight 600
+    font-size 120%
+
+  &__info
+    $_alertModifier($infoColor)
+  &__success
+    $_alertModifier($successColor)
+  &__warning
+    $_alertModifier($warningColor)
+  &__error
+    $_alertModifier($errorColor)
+
+$_alertModifier(color)
+  border-color color
+  background-color tint(color, 85%)
+  color darken(color, 35%)

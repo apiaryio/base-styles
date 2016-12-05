@@ -1,0 +1,64 @@
+// External deps
+@import '../../../node_modules/flexboxgrid/dist/flexboxgrid.min.css'
+@import '../../../node_modules/icono/dist/icono.min.css'
+@import '../../../node_modules/prismjs/themes/prism.css'
+@import '../../../node_modules/highlight.js/styles/monokai-sublime.css'
+
+// import Base Styles
+@import '../../../base-styles/apiary.styl'
+
+@import './css/colors'
+@import './css/typography'
+@import './css/buttons'
+@import './css/highlight'
+@import './css/forms'
+@import './css/alert'
+
+body
+  background-color white
+
+$apiaryBase()
+$apiaryHeadings()
+
+main
+  display flex
+
+.styleguideWrap
+  width 100%
+  max-width 960px
+  margin 0 auto
+  padding 20px
+  > article
+    margin-bottom 80px
+    h2:first-child
+      border-bottom 1px solid $border
+      margin-bottom 15px
+
+.intro
+  text-align center
+  padding-top 15px
+  &__image
+    max-width 100px
+  &__title
+    font-size 22px
+    margin-bottom 20px
+  &__code
+    font-size 12px
+
+hr
+  border-top 1px dashed $border
+  border-bottom 1px dashed #fff
+  margin 30px 0
+
+*:focus
+  outline 0
+
+// For alert example
+.icono-checkCircle
+  color darken($successColor, 35%)
+
+code
+  font-size 80%
+  padding 2px
+  background #fefefe
+  border-radius 4px
