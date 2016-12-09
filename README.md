@@ -23,6 +23,8 @@ This will include main `.styl` file and you can start using mixins and variables
 
 ## Developing
 
+Use Node 7.2 and higher.
+
 ```bash
 npm start
 ```
