@@ -10,3 +10,10 @@
     background-color #264653
     &:hover
       background-color #2A9D8F
+
+.loadingIndicator
+  $loadingIndicator()
+  &--big
+    $loadingIndicator(size: 12px)
+  &--blue
+    $loadingIndicator(color: $primaryColor)
