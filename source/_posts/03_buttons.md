@@ -42,6 +42,8 @@ Style Guide comes with few predefined button styles and an unified button baseli
   $apiaryButtonLink() // Link only button
 ```
 
+### New button styles
+
 You can easily create new combination if needed with `$apiaryButton()` mixin with single argument `fontSize` (defaults to `13px`)
 
 ```stylus
@@ -62,3 +64,31 @@ There are 3 supported HTML markups:
 <!-- use in forms -->
 <input type="button" class="button--secondary" value="Hello world" />
 ```
+
+### Loading indicator element
+Use `$loadingIndicator()` mixin with `color` and `size` options:
+
+
+```stylus
+.loadingIndicator
+  $loadingIndicator()
+  &--big
+    $loadingIndicator(size: 12px)
+  &--blue
+    $loadingIndicator(color: $primaryColor)
+```
+
+```html
+<div class="loadingIndicator"></div>
+<div class="loadingIndicator loadingIndicator--big"></div>
+<div class="loadingIndicator loadingIndicator--blue"></div>
+```
+
+Default
+<div class="loadingIndicator"></div>
+
+With specified `size`
+<div class="loadingIndicator loadingIndicator--big"></div>
+
+With specified `color`
+<div class="loadingIndicator loadingIndicator--blue"></div>

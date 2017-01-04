@@ -26,3 +26,37 @@ $mediaObject()
     margin-right 15px
   &--body
     flex 1
+
+$loadingIndicator(size = 4px, color = #4C5264)
+  // We need different keyframes for different colors, thus we need unique ID
+  $animId = loadingIndicatorPulse + red(color) + green(color) + blue(color)
+  margin 5px (size + 5px)
+  position relative
+  &, &:before, &:after
+    content ''
+    display block
+    width size
+    height size
+    background alpha(color, 1)
+    border-radius 50%
+    animation $animId 500ms infinite
+  &:before, &:after
+    position absolute
+    top 0
+  &
+    animation-delay 100ms
+  &:before
+    left - (size + 2px)
+    animation-delay 0ms
+  &:after
+    left (size + 2px)
+    animation-delay 200ms
+
+  // Keyframes are added only once indicator is used
+  @keyframes $animId
+    0%
+      background alpha(color, .7)
+    50%
+      background alpha(color, 1)
+    100%
+      background alpha(color, .7)
