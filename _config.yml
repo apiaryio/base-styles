@@ -79,7 +79,7 @@ theme: apiarybasestyles
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: https://github.com/apiaryio/base-styles/
+  repo: https://GH_TOKEN@github.com/apiaryio/base-styles/
   branch: gh-pages
 
 markdown-it:

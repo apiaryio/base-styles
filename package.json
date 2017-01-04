@@ -3,7 +3,7 @@
   "version": "0.0.0-semantic-release",
   "main": "base-styles/apiary.styl",
   "scripts": {
-    "deploy": "hexo generate && npm run semantic-release && hexo deploy",
+    "deploy": "hexo generate && hexo deploy && npm run semantic-release",
     "server": "hexo server",
     "start": "npm run server",
     "test": "hexo generate",
