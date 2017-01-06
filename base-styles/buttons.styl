@@ -64,3 +64,8 @@ $apiaryButtonLink(fontSize = $_defaultButtonSize)
     color $linkColorHover
   &:active
     box-shadow none // Remove :active styles
+  &:disabled
+    background-color transparent
+    cursor not-allowed
+    &:hover
+      background-color transparent
