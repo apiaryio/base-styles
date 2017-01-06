@@ -11,21 +11,21 @@ $alert()
     margin 0
     text-align left
 
-  &--body
+  &__body
     text-align left
 
-  &--heading
+  &__heading
     text-align left
     font-weight 600
     font-size 120%
 
-  &__info
+  &--info
     $_alertModifier($infoColor)
-  &__success
+  &--success
     $_alertModifier($successColor)
-  &__warning
+  &--warning
     $_alertModifier($warningColor)
-  &__error
+  &--error
     $_alertModifier($errorColor)
 
 $_alertModifier(color)
