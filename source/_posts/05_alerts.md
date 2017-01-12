@@ -33,7 +33,7 @@ Alert headings and icon/body are also available. Use `__figure` and `__body` as 
   </div>
   <div class="alert__body">
     <div class="alert__heading">Heading</div>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin imperdiet ex a quam commodo semper. Sed ac nulla in velit feugiat malesuada. Donec vel volutpat arcu, vitae ullamcorper sem. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    <p>Lorem ipsum <a href="javascript:;">dolor sit amet</a>, consectetur adipiscing elit. Proin imperdiet ex a quam commodo semper. Sed ac nulla in velit feugiat malesuada. Donec vel volutpat arcu, vitae ullamcorper sem. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
   </div>
 </div>
 
@@ -45,20 +45,20 @@ Alert headings and icon/body are also available. Use `__figure` and `__body` as 
   </div>
   <div class="alert__body">
     <div class="alert__heading">Heading</div>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin imperdiet ex a quam commodo semper. Sed ac nulla in velit feugiat malesuada. Donec vel volutpat arcu, vitae ullamcorper sem. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    <p>Lorem ipsum <a href="javascript:;">dolor sit amet</a>, consectetur adipiscing elit. Proin imperdiet ex a quam commodo semper. Sed ac nulla in velit feugiat malesuada. Donec vel volutpat arcu, vitae ullamcorper sem. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
   </div>
 </div>
 ```
 
 <div class="alert alert--info">
   <div class="alert__heading">Heading</div>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin imperdiet ex a quam commodo semper. Sed ac nulla in velit feugiat malesuada. Donec vel volutpat arcu, vitae ullamcorper sem. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+  <p>Lorem ipsum dolor sit amet, <a href="javascript:;">dolor sit amet</a>. Proin imperdiet ex a quam commodo semper. Sed ac nulla in velit feugiat malesuada. Donec vel volutpat arcu, vitae ullamcorper sem. Lorem ipsum dolor sit amet, <a href="javascript:;">dolor sit amet</a>.</p>
 </div>
 
 ```html
 <div class="alert alert--info">
   <div class="alert__heading">Heading</div>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin imperdiet ex a quam commodo semper. Sed ac nulla in velit feugiat malesuada. Donec vel volutpat arcu, vitae ullamcorper sem. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+  <p>Lorem ipsum dolor sit amet, <a href="javascript:;">dolor sit amet</a>. Proin imperdiet ex a quam commodo semper. Sed ac nulla in velit feugiat malesuada. Donec vel volutpat arcu, vitae ullamcorper sem. Lorem ipsum dolor sit amet, <a href="javascript:;">dolor sit amet</a>.</p>
 </div>
 ```
 

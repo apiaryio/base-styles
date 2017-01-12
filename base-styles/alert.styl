@@ -17,6 +17,7 @@ $alert()
     text-align left
     font-weight 600
     font-size 120%
+    width 100%
 
   &--info
     $_alertModifier($infoColor)
@@ -28,5 +29,9 @@ $alert()
     $_alertModifier($errorColor)
 
 $_alertModifier(color)
-  background-color tint(color, 85%)
-  color darken(color, 35%)
+  background-color tint(color, 90%)
+  color darken(color, 47%)
+  a
+    color darken(color, 50%)
+    &:hover, &:focus
+      color darken(color, 85%)
