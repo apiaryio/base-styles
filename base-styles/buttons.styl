@@ -55,6 +55,17 @@ $apiaryButtonSecondary(fontSize = $_defaultButtonSize)
   &:hover
     background-color $secondaryColorHover
 
+$apiaryButtonGhost(fontSize = $_defaultButtonSize)
+  $apiaryButton(fontSize)
+  background-color white
+  border 1px solid #D5DEED
+  box-shadow 0 1px 1px 0 #F0F1F4
+  color $primaryBaseColor
+  &:hover
+    color #000
+    background-color white
+    border 1px solid #a6b9d9
+
 $apiaryButtonLink(fontSize = $_defaultButtonSize)
   $apiaryButton(fontSize)
   color $linkColor
