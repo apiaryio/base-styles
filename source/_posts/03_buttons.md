@@ -10,6 +10,7 @@ Style Guide comes with few predefined button styles and an unified button baseli
 ```
 <button class="button--primary"><div>Hello world</div></button>
 <button class="button--secondary"><div>Hello world</div></button>
+<button class="button--ghost"><div>Hello world</div></button>
 <button class="button--link"><div>Hello world</div></button>
 <button class="button--primary" disabled><div>Disabled button</div></button>
 
@@ -19,6 +20,7 @@ Style Guide comes with few predefined button styles and an unified button baseli
 ```
 <a href="javascript:;" class="button--primary" role="button">Hello world</a>
 <a href="javascript:;" class="button--secondary" role="button">Hello world</a>
+<a href="javascript:;" class="button--ghost" role="button">Hello world</a>
 <a href="javascript:;" class="button--link" role="button">Hello world</a>
 <a href="javascript:;" class="button--primary" role="button" disabled>Disabled doesn't work for anchor tags</a>
 
@@ -27,6 +29,7 @@ Style Guide comes with few predefined button styles and an unified button baseli
 ```
 <input type="button" class="button--primary" value="Hello world" />
 <input type="button" class="button--secondary" value="Hello world" />
+<input type="button" class="button--ghost" value="Hello world" />
 <input type="button" class="button--link" value="Hello world" />
 <input type="button" class="button--primary" value="Disabled button" disabled />
 
@@ -38,6 +41,8 @@ Style Guide comes with few predefined button styles and an unified button baseli
   $apiaryButtonPrimary()
 .button--secondary
   $apiaryButtonSecondary()
+.button--ghost
+  $apiaryButtonGhost()
 .button--link
   $apiaryButtonLink() // Link only button
 ```
