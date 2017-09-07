@@ -17,16 +17,10 @@ It will setup
 - link colors
 - responsive image resizing
 
-Easiest way to get these fonts into your website is embedding them directly from Google Fonts:
-
-```html
-<link href="https://fonts.googleapis.com/css?family=Source+Code+Pro|Source+Sans+Pro:200,400,600" rel="stylesheet">
-```
-
-For production, [better ways are recommended](https://www.zachleat.com/web/comprehensive-webfonts/).
+We are fully relying on system fonts.
 
 <div class="typoBox typoBox--sans">
-  <h3>Source Sans</h3>
+  <h3>San Francisco and Segoe UI</h3>
   <p>General use font</p>
   ```stylus
   p
@@ -42,7 +36,7 @@ For production, [better ways are recommended](https://www.zachleat.com/web/compr
 <hr />
 
 <div class="typoBox typoBox--mono">
-  <h3>Source Code Pro</h3>
+  <h3>San Francisco Mono and Consolas</h3>
   <p>For code examples or editor</p>
   ```stylus
   code
