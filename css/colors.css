@@ -1,0 +1,46 @@
+.palette__color {
+  width: 100%;
+  height: 50px;
+  border-right: 100px solid #808080;
+}
+.palette__colorGroup:last-child {
+  text-align: right;
+}
+.palette__name {
+  padding-top: 7px;
+  font-size: 10px;
+  font-family: $monoFont;
+}
+.palette__hex {
+  font-weight: 700;
+}
+.palette--primary {
+  color: $primaryColor;
+}
+.palette--primary .palette__color {
+  background-color: $primaryColor;
+  border-right-color: $primaryColorHover;
+}
+.palette--primary .palette__colorGroup:last-child {
+  color: $primaryColorHover;
+}
+.palette--secondary {
+  color: $secondaryColor;
+}
+.palette--secondary .palette__color {
+  background-color: $secondaryColor;
+  border-right-color: $secondaryColorHover;
+}
+.palette--secondary .palette__colorGroup:last-child {
+  color: $secondaryColorHover;
+}
+.palette--tertiary {
+  color: $tertiaryColor;
+}
+.palette--tertiary .palette__color {
+  background-color: $tertiaryColor;
+  border-right-color: $tertiaryColorHover;
+}
+.palette--tertiary .palette__colorGroup:last-child {
+  color: $tertiaryColorHover;
+}

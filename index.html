@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Apiary Base Styles</title>
+  <link rel="stylesheet" href="/styleguide.css">
+</head>
+<body ontouchstart="">
+  <main>
+    <section class="styleguideWrap">
+      <h1>Apiary Base Style</h1>
+
+
+  <article>
+    <h2>About</h2>
+    <p>These Base Styles are meant as a baseline for our frontend.</p>
+<h3>Goals</h3>
+<ul>
+<li>Unify fonts, colors and common elements</li>
+<li>Unopinionated and flexible</li>
+<li>0 kb dependency - <em>only expose mixins</em> and allows gradual rollout</li>
+</ul>
+<p>Feel free to extend and override it. It’s not an UI framework, <em>but it could serve as a base for one)</em>. <em>Pattern library</em> should take care of cataloging use of this in the wild.</p>
+<h3>Getting started</h3>
+<p>Install with npm:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm i apiary-base-styles -S</span><br></pre></td></tr></table></figure>
+<p>Import into your Stylus file:</p>
+<figure class="highlight stylus"><table><tr><td class="code"><pre><span class="line">@import <span class="string">'~apiary-base-styles'</span></span><br></pre></td></tr></table></figure>
+<p>Now you can start using parts of Base Styles - all of them are prefixed with <code>$</code>, see reference below.</p>
+
+ </article>
+
+  <article>
+    <h2>Colors</h2>
+    <div class="row">
+  <div class="palette palette--primary col-xs-12 col-md-4">
+    <div class="palette__color"></div>
+    <div class="row">
+      <div class="palette__colorGroup col-xs">
+        <div class="palette__name">$primaryColor</div>
+        <div class="palette__hex">#49b7ff</div>
+      </div>
+      <div class="palette__colorGroup col-xs">
+        <div class="palette__name">$primaryColorHover</div>
+        <div class="palette__hex">#309EE6</div>
+      </div>
+    </div>
+  </div>
+  <div class="palette palette--secondary col-xs-12 col-md-4">
+    <div class="palette__color"></div>
+    <div class="row">
+      <div class="palette__colorGroup col-xs">
+        <div class="palette__name">$secondaryColor</div>
+        <div class="palette__hex">#49cc90</div>
+      </div>
+      <div class="palette__colorGroup col-xs">
+        <div class="palette__name">$secondaryColorHover</div>
+        <div class="palette__hex">#30B377</div>
+      </div>
+    </div>
+  </div>
+  <div class="palette palette--tertiary col-xs-12 col-md-4">
+    <div class="palette__color"></div>
+    <div class="row">
+      <div class="palette__colorGroup col-xs">
+        <div class="palette__name">$tertiaryColor</div>
+        <div class="palette__hex">#7991FF</div>
+      </div>
+      <div class="palette__colorGroup col-xs">
+        <div class="palette__name">$tertiaryColorHover</div>
+        <div class="palette__hex">#6078E6</div>
+      </div>
+    </div>
+  </div>
+</div>
+<p>All colors are exported as Stylus variables.</p>
+<p>You can also use:</p>
+<ul>
+<li><code>$successColor</code></li>
+<li><code>$errorColor</code></li>
+<li><code>$warningColor</code></li>
+<li><code>$infoColor</code></li>
+</ul>
+
+ </article>
+
+  <article>
+    <h2>Typography</h2>
+    <p>You can setup basic styles for text like color, line-height and font-weight by calling <code>$apiaryBase</code> mixin like so:</p>
+<figure class="highlight stylus"><table><tr><td class="code"><pre><span class="line"><span class="variable">$apiaryBase</span>()</span><br></pre></td></tr></table></figure>
+<p>It will setup</p>
+<ul>
+<li>default font size</li>
+<li>set box-sizing to border-box</li>
+<li>padding, margin 0 on html/body</li>
+<li>link colors</li>
+<li>responsive image resizing</li>
+</ul>
+<p>We are fully relying on system fonts.</p>
+<div class="typoBox typoBox--sans">
+  <h3>San Francisco and Segoe UI</h3>
+  <p>General use font</p>
+  <figure class="highlight stylus"><table><tr><td class="code"><pre><span class="line">p</span><br><span class="line">  <span class="attribute">font-family</span> <span class="variable">$baseFont</span></span><br></pre></td></tr></table></figure>
+  <div class="row between-xs">
+    <div class="typoBox__content typoBox__content--sans typoBox__content--200 col-xs-12 col-md-4">abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890</div>
+    <div class="typoBox__content typoBox__content--sans typoBox__content--400 col-xs-12 col-md-4">abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890</div>
+    <div class="typoBox__content typoBox__content--sans typoBox__content--600 col-xs-12 col-md-4">abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890</div>
+  </div>
+</div>
+<hr />
+<div class="typoBox typoBox--mono">
+  <h3>San Francisco Mono and Consolas</h3>
+  <p>For code examples or editor</p>
+  <figure class="highlight stylus"><table><tr><td class="code"><pre><span class="line">code</span><br><span class="line">  <span class="attribute">font-family</span> <span class="variable">$monoFont</span></span><br></pre></td></tr></table></figure>
+  <div class="typoBox__content typoBox__content--mono typoBox__content--400">abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890?!.-</div>
+</div>
+<hr />
+<h2>Heading styles</h2>
+<p>Few predefined heading styles</p>
+<div class="typoPreview">
+  <h1><code>h1</code>Fast-track your API Design</h1>
+  <h2><code>h2</code>Fast-track your API Design</h2>
+  <h3><code>h3</code>Fast-track your API Design</h3>
+  <h4><code>h4</code>Fast-track your API Design</h4>
+  <h5><code>h5</code>Fast-track your API Design</h5>
+  <h6><code>h6</code>Fast-track your API Design</h6>
+</div>
+<figure class="highlight stylus"><table><tr><td class="code"><pre><span class="line"><span class="variable">$apiaryHeadings</span>() <span class="comment">/* To setup h1 to h6 styles */</span></span><br></pre></td></tr></table></figure>
+
+ </article>
+
+  <article>
+    <h2>Buttons</h2>
+    <p>Style Guide comes with few predefined button styles and an unified button baseline mixin:</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">class</span>=<span class="string">"button--primary"</span>&gt;</span><span class="tag">&lt;<span class="name">div</span>&gt;</span>Hello world<span class="tag">&lt;/<span class="name">div</span>&gt;</span><span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p><button class="button--primary"><div>Hello world</div></button>
+<button class="button--secondary"><div>Hello world</div></button>
+<button class="button--ghost"><div>Hello world</div></button>
+<button class="button--link"><div>Hello world</div></button>
+<button class="button--primary" disabled><div>Disabled button</div></button></p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"javascript:;"</span> <span class="attr">class</span>=<span class="string">"button--primary"</span> <span class="attr">role</span>=<span class="string">"button"</span>&gt;</span>Hello world<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p><a href="javascript:;" class="button--primary" role="button">Hello world</a>
+<a href="javascript:;" class="button--secondary" role="button">Hello world</a>
+<a href="javascript:;" class="button--ghost" role="button">Hello world</a>
+<a href="javascript:;" class="button--link" role="button">Hello world</a>
+<a href="javascript:;" class="button--primary" role="button" disabled>Disabled doesn’t work for anchor tags</a></p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"button"</span> <span class="attr">class</span>=<span class="string">"button--primary"</span> <span class="attr">value</span>=<span class="string">"Hello world"</span> /&gt;</span></span><br></pre></td></tr></table></figure>
+<input type="button" class="button--primary" value="Hello world" />
+<input type="button" class="button--secondary" value="Hello world" />
+<input type="button" class="button--ghost" value="Hello world" />
+<input type="button" class="button--link" value="Hello world" />
+<input type="button" class="button--primary" value="Disabled button" disabled />
+<p><strong>PROTIP</strong>: <a href="https://www.youtube.com/watch?v=CZGqnp06DnI">Use <code>&lt;button&gt;</code> element for UI</a></p>
+<figure class="highlight stylus"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 4 predefined button styles</span></span><br><span class="line">.button--primary</span><br><span class="line">  <span class="variable">$apiaryButtonPrimary</span>()</span><br><span class="line">.button--secondary</span><br><span class="line">  <span class="variable">$apiaryButtonSecondary</span>()</span><br><span class="line">.button--ghost</span><br><span class="line">  <span class="variable">$apiaryButtonGhost</span>()</span><br><span class="line">.button--link</span><br><span class="line">  <span class="variable">$apiaryButtonLink</span>() <span class="comment">// Link only button</span></span><br></pre></td></tr></table></figure>
+<h3>New button styles</h3>
+<p>You can easily create new combination if needed with <code>$apiaryButton()</code> mixin with single argument <code>fontSize</code> (defaults to <code>13px</code>)</p>
+<figure class="highlight stylus"><table><tr><td class="code"><pre><span class="line">.button--custom</span><br><span class="line">  <span class="variable">$apiaryButton</span>(fontSize: <span class="number">18px</span>)</span><br><span class="line">  <span class="attribute">background-color</span> <span class="number">#264653</span></span><br><span class="line">  &amp;:hover</span><br><span class="line">    <span class="attribute">background-color</span> <span class="number">#2A9D8F</span></span><br></pre></td></tr></table></figure>
+<p><button class="button--custom"><div>New button style!</div></button></p>
+<p>There are 3 supported HTML markups:</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!-- use for links --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#"</span> <span class="attr">class</span>=<span class="string">"button--primary"</span>&gt;</span>Hello world<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- use for actions in UI --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">class</span>=<span class="string">"button--secondary"</span>&gt;</span><span class="tag">&lt;<span class="name">div</span>&gt;</span>Hello world<span class="tag">&lt;/<span class="name">div</span>&gt;</span><span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- use in forms --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"button"</span> <span class="attr">class</span>=<span class="string">"button--secondary"</span> <span class="attr">value</span>=<span class="string">"Hello world"</span> /&gt;</span></span><br></pre></td></tr></table></figure>
+<h3>Loading indicator element</h3>
+<p>Use <code>$loadingIndicator()</code> mixin with <code>color</code> and <code>size</code> options:</p>
+<figure class="highlight stylus"><table><tr><td class="code"><pre><span class="line">.loadingIndicator</span><br><span class="line">  <span class="variable">$loadingIndicator</span>()</span><br><span class="line">  &amp;--big</span><br><span class="line">    <span class="variable">$loadingIndicator</span>(size: <span class="number">12px</span>)</span><br><span class="line">  &amp;--blue</span><br><span class="line">    <span class="variable">$loadingIndicator</span>(<span class="attribute">color</span>: <span class="variable">$primaryColor</span>)</span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"loadingIndicator"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"loadingIndicator loadingIndicator--big"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"loadingIndicator loadingIndicator--blue"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>Default</p>
+<div class="loadingIndicator"></div>
+<p>With specified <code>size</code></p>
+<div class="loadingIndicator loadingIndicator--big"></div>
+<p>With specified <code>color</code></p>
+<div class="loadingIndicator loadingIndicator--blue"></div>
+
+ </article>
+
+  <article>
+    <h2>Forms</h2>
+    <p>Basic styling for forms is available under <code>$apiaryForm()</code> mixin</p>
+<figure class="highlight stylus"><table><tr><td class="code"><pre><span class="line">.apiaryForm</span><br><span class="line">  <span class="variable">$apiaryForm</span>()</span><br></pre></td></tr></table></figure>
+<div class="row">
+  <div class="col-xs-12 col-md-6">
+    <form class="apiaryForm">
+      <label for="fullName">Full Name</label>
+      <input type="text" name="fullName" id="fullName" value="John Doe">
+      <label for="email2">Email Address</label>
+      <input type="email" name="email" id="email2" value="invalid email@" required>
+      <label for="phoneNumber">Phone Number</label>
+      <input type="tel" name="phoneNumber" id="phoneNumber" placeholder="555-1234">
+      <input type="submit" value="Contact Me">
+    </form>
+  </div>
+  <div class="col-xs-12 col-md-6">
+    <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">form</span> <span class="attr">class</span>=<span class="string">"apiaryForm"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">"fullName"</span>&gt;</span>Full Name<span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">name</span>=<span class="string">"fullName"</span> <span class="attr">id</span>=<span class="string">"fullName"</span> <span class="attr">value</span>=<span class="string">"John Doe"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">"email"</span>&gt;</span>Email Address<span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"email"</span> <span class="attr">name</span>=<span class="string">"email"</span> <span class="attr">id</span>=<span class="string">"email2"</span> <span class="attr">value</span>=<span class="string">"invalid email@"</span> <span class="attr">required</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">"phoneNumber"</span>&gt;</span>Phone Number<span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"tel"</span> <span class="attr">name</span>=<span class="string">"phoneNumber"</span> <span class="attr">id</span>=<span class="string">"phoneNumber"</span> <span class="attr">placeholder</span>=<span class="string">"555-1234"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"submit"</span> <span class="attr">value</span>=<span class="string">"Contact Me"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">form</span>&gt;</span></span><br></pre></td></tr></table></figure>
+  </div>
+</div>
+<hr />
+<div class="row">
+  <div class="col-xs-12 col-md-6">
+    <form class="apiaryForm">
+      <fieldset>
+        <legend>A compact inline form</legend>
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" placeholder="john@example.com">
+        <label for="password">Password</label>
+        <input type="password" name="password" id="password" placeholder="password">
+        <label for="remember">
+          <input id="remember" type="checkbox"> Remember me
+        </label>
+        <button type="submit">Sign in</button>
+      </fieldset>
+    </form>
+  </div>
+  <div class="col-xs-12 col-md-6">
+    <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">form</span> <span class="attr">class</span>=<span class="string">"apiaryForm"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">fieldset</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">legend</span>&gt;</span>A compact inline form<span class="tag">&lt;/<span class="name">legend</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">"email"</span>&gt;</span>Email<span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"email"</span> <span class="attr">name</span>=<span class="string">"email"</span> <span class="attr">id</span>=<span class="string">"email"</span> <span class="attr">placeholder</span>=<span class="string">"john@example.com"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">"password"</span>&gt;</span>Password<span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"password"</span> <span class="attr">name</span>=<span class="string">"password"</span> <span class="attr">id</span>=<span class="string">"password"</span> <span class="attr">placeholder</span>=<span class="string">"password"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">"remember"</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">input</span> <span class="attr">id</span>=<span class="string">"remember"</span> <span class="attr">type</span>=<span class="string">"checkbox"</span>&gt;</span> Remember me</span><br><span class="line">    <span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">button</span> <span class="attr">type</span>=<span class="string">"submit"</span>&gt;</span>Sign in<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">fieldset</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">form</span>&gt;</span></span><br></pre></td></tr></table></figure>
+  </div>
+</div>
+
+ </article>
+
+  <article>
+    <h2>Alert boxes</h2>
+    <p>Alert boxes are important part of the UI.</p>
+<figure class="highlight stylus"><table><tr><td class="code"><pre><span class="line">.alert</span><br><span class="line">  <span class="variable">$alert</span>()</span><br></pre></td></tr></table></figure>
+<p>This will add some basic styling to <code>.alert</code> and adds BEM modifiers <code>--success</code>, <code>--warning</code>, <code>--error</code> and <code>--info</code>.</p>
+<div class="alert alert--success">Success message</div>
+<div class="alert alert--warning">Warning message</div>
+<div class="alert alert--error">Error message</div>
+<div class="alert alert--info">Info message</div>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"alert alert--success"</span>&gt;</span>Success message<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"alert alert--warning"</span>&gt;</span>Warning message<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"alert alert--error"</span>&gt;</span>Error message<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"alert alert--info"</span>&gt;</span>Info message<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>Alert headings and icon/body are also available. Use <code>__figure</code> and <code>__body</code> as a <a href="http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code/">media object</a>:</p>
+<div class="alert alert--success">
+  <div class="alert__figure">
+    <!-- Any icon/image is allowed here -->
+    <i class="icono-checkCircle"></i>
+  </div>
+  <div class="alert__body">
+    <div class="alert__heading">Heading</div>
+    <p>Lorem ipsum <a href="javascript:;">dolor sit amet</a>, consectetur adipiscing elit. Proin imperdiet ex a quam commodo semper. Sed ac nulla in velit feugiat malesuada. Donec vel volutpat arcu, vitae ullamcorper sem. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+  </div>
+</div>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"alert alert--success"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"alert__figure"</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- Any icon/image is allowed here --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">"icono-checkCircle"</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"alert__body"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"alert__heading"</span>&gt;</span>Heading<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>Lorem ipsum <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"javascript:;"</span>&gt;</span>dolor sit amet<span class="tag">&lt;/<span class="name">a</span>&gt;</span>, consectetur adipiscing elit. Proin imperdiet ex a quam commodo semper. Sed ac nulla in velit feugiat malesuada. Donec vel volutpat arcu, vitae ullamcorper sem. Lorem ipsum dolor sit amet, consectetur adipiscing elit.<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<div class="alert alert--info">
+  <div class="alert__heading">Heading</div>
+  <p>Lorem ipsum dolor sit amet, <a href="javascript:;">dolor sit amet</a>. Proin imperdiet ex a quam commodo semper. Sed ac nulla in velit feugiat malesuada. Donec vel volutpat arcu, vitae ullamcorper sem. Lorem ipsum dolor sit amet, <a href="javascript:;">dolor sit amet</a>.</p>
+</div>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"alert alert--info"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"alert__heading"</span>&gt;</span>Heading<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">p</span>&gt;</span>Lorem ipsum dolor sit amet, <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"javascript:;"</span>&gt;</span>dolor sit amet<span class="tag">&lt;/<span class="name">a</span>&gt;</span>. Proin imperdiet ex a quam commodo semper. Sed ac nulla in velit feugiat malesuada. Donec vel volutpat arcu, vitae ullamcorper sem. Lorem ipsum dolor sit amet, <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"javascript:;"</span>&gt;</span>dolor sit amet<span class="tag">&lt;/<span class="name">a</span>&gt;</span>.<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>Don’t forget to use <code>&lt;p&gt;</code> for content when using <code>__heading</code>.</p>
+
+ </article>
+
+
+    </section>
+  </main>
+</body>
+</html>
