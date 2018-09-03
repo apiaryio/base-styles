@@ -1,0 +1,32 @@
+version: 2
+jobs:
+  test:
+    docker:
+      - image: circleci/node:10
+    steps:
+      - checkout
+      - run: npm install
+      - run: npm test
+  release:
+    docker:
+      - image: circleci/node:10
+    steps:
+      - checkout
+      - run: npm install
+      - run: git config --global user.email "support@apiary.io"
+      - run: git config --global user.name "Apiary Bot"
+      - run: find . -name '_config.yml' -exec sed -i '' -e "s/GH_TOKEN/${GH_TOKEN}/g" '{}' \;
+      - run: git remote set-url origin "https://${GH_TOKEN}@github.com/apiaryio/base-styles"
+      - run: npm run deploy || true
+
+workflows:
+  version: 2
+  build:
+    jobs:
+      - test
+      - release:
+          requires:
+            - test
+          filters:
+            branches:
+              only: master
